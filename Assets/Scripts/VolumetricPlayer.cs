@@ -13,6 +13,7 @@ public class VolumetricPlayer : MonoBehaviour
 {
    [Header("Config")]
    public bool PlayAtStart = true;
+   public string AnnotationsPath = "";
    public GameObject[] MeshSequence = new GameObject[0];
    public int FPS = 30;
    public float PlaybackSpeed = 1.0f;
