@@ -26,6 +26,19 @@ public class AnnotationData
       return data;
    }
 
+   public static AnnotationData CreateData(List<AnnotationChannelType> types)
+   {
+      AnnotationData data = new AnnotationData();
+
+      List<AnnotationChannel> channels = new List<AnnotationChannel>();
+      foreach (var t in types)
+         channels.Add(new AnnotationChannel(t));
+
+      data.Channels = channels.ToArray();
+
+      return data;
+   }
+
    public AnnotationChannel[] Channels = new AnnotationChannel[0];
 }
 
