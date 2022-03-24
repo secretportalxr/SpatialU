@@ -12,12 +12,33 @@ public class VolumetricPlayEvent : UnityEvent<VolumetricPlayer.PlaybackState, Vo
 
 public class VolumetricPlayer : MonoBehaviour
 {
-   [Header("Config")]
+   [Header("Basic Config")]
    public bool PlayAtStart = true;
    public string AnnotationsPath = "";
+   public SequenceType SeqType = SequenceType.MeshSequence;
    public GameObject[] MeshSequence = new GameObject[0];
    public int FPS = 30;
    public float PlaybackSpeed = 1.0f;
+
+   public enum SequenceType
+   {
+      MeshSequence,
+      Timeline
+   }
+
+
+   [Header("Steps")]
+   [Tooltip("Set CurStep to -1 if you want to play thru ")]
+   public int CurStep = -1;
+   public Step[] Steps = new Step[0];
+
+
+   [System.Serializable]
+   public class Step
+   {
+      public float StartProgress = 0.0f;
+      public float EndProgress = 1.0f;
+   }
 
    [Header("Debug")]
    [InspectorButton("_DebugPlay")]
@@ -33,6 +54,8 @@ public class VolumetricPlayer : MonoBehaviour
 
    PlaybackState _playbackState = PlaybackState.Stopped;
    float _lastFrame = 0.0f;
+
+   int _curStepShowing = -1;
 
    public enum PlaybackState
    {
@@ -79,9 +102,16 @@ public class VolumetricPlayer : MonoBehaviour
    {
       if(_playbackState == PlaybackState.Playing)
       {
-         _lastFrame += Time.deltaTime * (float)FPS * PlaybackSpeed;
-         int curFrameIdx = Mathf.FloorToInt(_lastFrame % MeshSequence.Length);
-         _ShowFrame(curFrameIdx);
+         if(SeqType == SequenceType.MeshSequence)
+         {
+            _lastFrame += Time.deltaTime * (float)FPS * PlaybackSpeed;
+            int curFrameIdx = Mathf.FloorToInt(_lastFrame % MeshSequence.Length);
+            _ShowFrame(curFrameIdx);
+         }
+         else if(SeqType == SequenceType.Timeline)
+         {
+            //TODO
+         }
       }
    }
 
