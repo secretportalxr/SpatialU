@@ -9,11 +9,18 @@ public class CamMgr : MonoBehaviour
    public GameObject HololensRig;
    public GameObject ScreenRig;
 
+   public static CamMgr I { get; private set; }
+
    public enum CamMode
    {
       Oculus,
       Hololens,
       Screen
+   }
+
+   void Awake()
+   {
+      I = this;
    }
 
    void Start()

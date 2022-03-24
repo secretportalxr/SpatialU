@@ -8,5 +8,8 @@ using UnityEngine;
 
 public class AnnotationTool : MonoBehaviour
 {
+   public Transform SpawnPt;
+   public VolumetricPlayer VolumetricAssetPrefab;
+
 
 }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5357045208740473642}
   - component: {fileID: 5862801315430604022}
+  - component: {fileID: 6896327885760865029}
   m_Layer: 0
   m_Name: cam_mgr
   m_TagString: Untagged
@@ -48,6 +49,18 @@ MonoBehaviour:
   OculusRig: {fileID: 7852005308531189245}
   HololensRig: {fileID: 0}
   ScreenRig: {fileID: 0}
+--- !u!114 &6896327885760865029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763205838402587706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e95fa8c81ecabc4096e1317c079d61e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7852005308531090265
 PrefabInstance:
   m_ObjectHideFlags: 0
