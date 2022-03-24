@@ -70,6 +70,8 @@ public class VolumetricPlayer : MonoBehaviour
          SetPlaybackState(PlaybackState.Playing);
    }
 
+   public PlaybackState GetPlaybackState() { return _playbackState; }
+
    public void SetPlaybackState(PlaybackState newState)
    {
       if (_playbackState == newState)
