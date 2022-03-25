@@ -8,8 +8,13 @@ public class TutorialData : ScriptableObject
 {
     public GameObject volumetricPlayerPrefab;
     public Vector3 spawnOffset = Vector3.zero;
+    public TutorialClips tutorialClips;
 
-    public void SpawnVolumetricPlayer()
+    public void PlayTutorial()
+    {
+        SpawnVolumetricPlayer();
+    }
+    void SpawnVolumetricPlayer()
     {
         GameObject volumetricPlayer = Instantiate(volumetricPlayerPrefab,
                                                     ProgressionMgr.instance.spawnPoint.position+spawnOffset,

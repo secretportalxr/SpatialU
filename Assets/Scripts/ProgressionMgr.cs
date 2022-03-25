@@ -26,6 +26,10 @@ public class ProgressionMgr : MonoBehaviour
             instance = this;
         }
     }
+    public void StartTutorial(int whichTutorial = 0)
+    {
+        Tutorials[whichTutorial].PlayTutorial();
+    }
 
 
 }
