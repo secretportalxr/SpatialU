@@ -13,6 +13,23 @@ public class InputMgr : MonoBehaviour
     public GameObject mainMenuPanel;
     private void Update()
     {
+        //IN THE MAIN MENU
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            ProgressionMgr.instance.volumetricPlayer.CurStep = -1;
+            ProgressionMgr.instance.volumetricPlayer.gameObject.SetActive(true);
+            StartTutorial();
+        }   
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            ProgressionMgr.instance.volumetricPlayer.CurStep = 0;
+            ProgressionMgr.instance.volumetricPlayer.gameObject.SetActive(true);
+            StartTutorial();
+        }
+
+
+
+        //WHEN THE VOLUMETRIC PLAYER IS RUNNING
         if(Input.GetKeyDown(KeyCode.RightArrow))
         {
             NextTutorialElement();
@@ -24,6 +41,10 @@ public class InputMgr : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             TogglePaused();
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            ExitTutorial();
         }
     }
 

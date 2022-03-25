@@ -12,7 +12,10 @@ public class ProgressionMgr : MonoBehaviour
 
     [Header("Tutorial Objects")]
     public VolumetricPlayer volumetricPlayer;
-    public List<GameObject> UIElements = new List<GameObject>();
+
+    [Header("UI Objects")]
+    public GameObject mainMenuPanel;
+    public List<GameObject> contentPanels = new List<GameObject>();
 
     private void Awake()
     {
@@ -29,13 +32,16 @@ public class ProgressionMgr : MonoBehaviour
     public void StartTutorial(int whichTutorial = 0)
     {
         Debug.Log("Starting Tutorial in Progression MGR");
-    
+        
         //Tutorials[whichTutorial].PlayTutorial();
     }
 
     public void SetUIElement()
-    { 
-        
+    {
+        foreach (GameObject i in contentPanels)
+        { 
+            
+        }
     }
 
 
