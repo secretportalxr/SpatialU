@@ -7,12 +7,12 @@ public class ProgressionMgr : MonoBehaviour
     public static ProgressionMgr instance;
 
     [Header("Data Objects")]
-    public List<TutorialData> Tutorials = new List<TutorialData>();
+    //public List<TutorialData> Tutorials = new List<TutorialData>();
     public Transform spawnPoint;
 
     [Header("Tutorial Objects")]
     public VolumetricPlayer volumetricPlayer;
-
+    public List<GameObject> UIElements = new List<GameObject>();
 
     private void Awake()
     {
@@ -28,7 +28,14 @@ public class ProgressionMgr : MonoBehaviour
     }
     public void StartTutorial(int whichTutorial = 0)
     {
-        Tutorials[whichTutorial].PlayTutorial();
+        Debug.Log("Starting Tutorial in Progression MGR");
+    
+        //Tutorials[whichTutorial].PlayTutorial();
+    }
+
+    public void SetUIElement()
+    { 
+        
     }
 
 

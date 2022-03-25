@@ -1,40 +1,70 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class UIMgr : MonoBehaviour
+
+
+public class InputMgr : MonoBehaviour
 {
     public GameObject volumeSlider;
+    public GameObject playThroughSwitch;
+    public GameObject tutorialPanel;
+    public GameObject mainMenuPanel;
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            NextTutorialElement();
+        }
+        if(Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            PreviousTutorialElement();
+        }
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            TogglePaused();
+        }
+    }
 
     public void ToggleVolumeSlider()
     {
+        Debug.Log("Toggle Volume ");
         volumeSlider.SetActive(volumeSlider.activeSelf);
     }
     public void SetVolume()
     {
-        if (!ProgressionMgr.instance.volumetricPlayer) return;
+        Debug.Log($"Set volume to {volumeSlider.GetComponent<Slider>().value}");
 
+        if (!ProgressionMgr.instance.volumetricPlayer) return;
+        //ProgressionMgr.instance.volumetricPlayer.SetVolume(volumeSlider.GetComponent<Slider>().value);
     }
 
     public void SetPlaySpeed()
     {
+        Debug.Log("Setting playbackspeed 0.5");
+
         if (!ProgressionMgr.instance.volumetricPlayer) return;
-        ProgressionMgr.instance.volumetricPlayer.PlaybackSpeed = 0.5f;
+        ProgressionMgr.instance.volumetricPlayer.PlaybackSpeed = 0.5f; 
     }
 
     public void NextTutorialElement()
     {
         if (!ProgressionMgr.instance.volumetricPlayer) return;
+        ProgressionMgr.instance.volumetricPlayer.CurStep++;
+        ProgressionMgr.instance.SetUIElement();
     }
     public void PreviousTutorialElement()
-    {
+    { 
         if (!ProgressionMgr.instance.volumetricPlayer) return;
+        ProgressionMgr.instance.volumetricPlayer.CurStep--;
+        ProgressionMgr.instance.SetUIElement();
     }
 
     public void TogglePaused()
     {
+        Debug.Log("Pause");
         if (!ProgressionMgr.instance.volumetricPlayer) return;
-
         if (ProgressionMgr.instance.volumetricPlayer.GetPlaybackState() == VolumetricPlayer.PlaybackState.Playing)
         {
             ProgressionMgr.instance.volumetricPlayer.SetPlaybackState(VolumetricPlayer.PlaybackState.Paused);
@@ -49,16 +79,21 @@ public class UIMgr : MonoBehaviour
     {
         if (!ProgressionMgr.instance.volumetricPlayer) return;
         //ProgressionMgr.instance.volumetricPlayer.SetStep(0);
+        Debug.Log("Restart");
+
     }
 
     public void StartTutorial()
     {
         ProgressionMgr.instance.StartTutorial();
+        Debug.Log("Start");
+
     }
     public void ExitTutorial()
     {
         if (!ProgressionMgr.instance.volumetricPlayer) return;
 
+        Debug.Log("Exit");
     }
 
 
@@ -66,7 +101,7 @@ public class UIMgr : MonoBehaviour
     public void TogglePlaythrough()
     {
         if (!ProgressionMgr.instance.volumetricPlayer) return;
-
+        Debug.Log("Toggle Playthrough");
     }
 
 
