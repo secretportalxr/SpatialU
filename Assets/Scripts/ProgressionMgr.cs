@@ -40,7 +40,8 @@ public class ProgressionMgr : MonoBehaviour
         //Tutorials[whichTutorial].PlayTutorial();
     }
 
-    public void SetUIElement()
+
+    public void SetUIElement(int i = 0)
     {
         foreach (GameObject content in contentPanels)
         {
@@ -50,7 +51,7 @@ public class ProgressionMgr : MonoBehaviour
             }
         }
 
-        contentPanels[volumetricPlayer.CurStep].SetActive(true);
+        contentPanels[i].SetActive(true);
     }
 
 
