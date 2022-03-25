@@ -101,19 +101,16 @@ public class InputMgr : MonoBehaviour
         if (!ProgressionMgr.instance.volumetricPlayer) return;
         //ProgressionMgr.instance.volumetricPlayer.SetStep(0);
         Debug.Log("Restart");
-
     }
 
     public void StartTutorial()
     {
         ProgressionMgr.instance.StartTutorial();
         Debug.Log("Start");
-
     }
     public void ExitTutorial()
     {
         if (!ProgressionMgr.instance.volumetricPlayer) return;
-
         Debug.Log("Exit");
     }
 

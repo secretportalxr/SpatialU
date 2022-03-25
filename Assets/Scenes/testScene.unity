@@ -393,8 +393,19 @@ MonoBehaviour:
   spawnPoint: {fileID: 0}
   volumetricPlayer: {fileID: 0}
   mainMenuPanel: {fileID: 2048118293}
+  tutorialPanel: {fileID: 3448844701472038602}
   contentPanels:
-  - {fileID: 3448844701472038602}
+  - {fileID: 2054674228742812425}
+  - {fileID: 2054674228742812424}
+  - {fileID: 2054674228742812423}
+  - {fileID: 2054674228742812422}
+  - {fileID: 2054674228742812421}
+  - {fileID: 2054674228742812420}
+  - {fileID: 2054674228742812419}
+  - {fileID: 2054674228742812418}
+  - {fileID: 2054674228742812417}
+  - {fileID: 2054674228742812416}
+  - {fileID: 2054674228742812415}
 --- !u!4 &1533867017
 Transform:
   m_ObjectHideFlags: 0
@@ -638,7 +649,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3701794691091000372, guid: 15d97996e4d0f934ebdaff4c510d1026, type: 3}
       propertyPath: m_Name
-      value: Tutorial_Panel_01
+      value: Tutorial_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 3701794691091000372, guid: 15d97996e4d0f934ebdaff4c510d1026, type: 3}
       propertyPath: m_IsActive
@@ -690,6 +701,61 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15d97996e4d0f934ebdaff4c510d1026, type: 3}
+--- !u!1 &2054674228742812415 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1906163754605453625, guid: 15d97996e4d0f934ebdaff4c510d1026, type: 3}
+  m_PrefabInstance: {fileID: 2054674228742812414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2054674228742812416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5766746668804643681, guid: 15d97996e4d0f934ebdaff4c510d1026, type: 3}
+  m_PrefabInstance: {fileID: 2054674228742812414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2054674228742812417 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7134110994123704022, guid: 15d97996e4d0f934ebdaff4c510d1026, type: 3}
+  m_PrefabInstance: {fileID: 2054674228742812414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2054674228742812418 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5123551224391720519, guid: 15d97996e4d0f934ebdaff4c510d1026, type: 3}
+  m_PrefabInstance: {fileID: 2054674228742812414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2054674228742812419 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3727402832013976791, guid: 15d97996e4d0f934ebdaff4c510d1026, type: 3}
+  m_PrefabInstance: {fileID: 2054674228742812414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2054674228742812420 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4253370146345129482, guid: 15d97996e4d0f934ebdaff4c510d1026, type: 3}
+  m_PrefabInstance: {fileID: 2054674228742812414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2054674228742812421 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6883900565087824604, guid: 15d97996e4d0f934ebdaff4c510d1026, type: 3}
+  m_PrefabInstance: {fileID: 2054674228742812414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2054674228742812422 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6146393242972873163, guid: 15d97996e4d0f934ebdaff4c510d1026, type: 3}
+  m_PrefabInstance: {fileID: 2054674228742812414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2054674228742812423 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3890331334238316832, guid: 15d97996e4d0f934ebdaff4c510d1026, type: 3}
+  m_PrefabInstance: {fileID: 2054674228742812414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2054674228742812424 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7087879896488556415, guid: 15d97996e4d0f934ebdaff4c510d1026, type: 3}
+  m_PrefabInstance: {fileID: 2054674228742812414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2054674228742812425 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5766375962676717293, guid: 15d97996e4d0f934ebdaff4c510d1026, type: 3}
+  m_PrefabInstance: {fileID: 2054674228742812414}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2744950207628788893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -703,7 +769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2744950208533793416, guid: 3c128d8e1a02b5d4caea4cbcc1d0df55, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2744950208533793419, guid: 3c128d8e1a02b5d4caea4cbcc1d0df55, type: 3}
       propertyPath: m_RootOrder
